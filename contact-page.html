@@ -20,6 +20,11 @@
             <div class="logo">
               <a class='logo__link' href='index.htm'>              </a>
             </div>
+            <div class="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
             <nav class="menu header__menu">
               <ul class="menu__list header__menu-list">
                 <li class="header__menu-item">
@@ -108,6 +113,17 @@
 
 
   <script src="js/main.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const burger = document.querySelector(".burger");
+        const menu = document.querySelector(".menu");
+    
+        burger.addEventListener("click", function() {
+            burger.classList.toggle("active");
+            menu.classList.toggle("active");
+        });
+    });
+    </script>
 </body>
 
 </html>
